@@ -5,7 +5,7 @@ Hello! Welcome to our University Project, more coming soon!
 `gir clone git@github.com:GingerPianist/Paddle-for-TCP-UDP.git`
 2. Create and start the virtual environment and install the Pygame package
 `pip install pygame`
-3. Start the server2.py and the klient.py 
-`python server2.py`
-`python3 ./klient.py --host [IP_ADDRESS_OF_SERVER] --port 53000 --protocol tcp ` for TCP
+3. Start the server2.py and the klient.py </br >
+`python server2.py` </br >
+`python3 ./klient.py --host [IP_ADDRESS_OF_SERVER] --port 53000 --protocol tcp ` for TCP </br >
 `python3 ./klient.py --host [IP_ADDRESS_OF_SERVER] --port 52000 --protocol udp ` for UDP
