@@ -1,6 +1,4 @@
-# ========================
-# serwer.py
-# ========================
+# Stara wersja serwera!
 import socket
 import threading
 import json
@@ -16,7 +14,7 @@ PADDLE_SIZE = 80
 FPS = 30
 TICK = 1.0 / FPS
 
-# --- Funkcje sieciowe ---
+# Funkcje sieciowe
 def send_tcp_json(conn, data):
     msg = json.dumps(data).encode('utf-8')
     length = struct.pack('>I', len(msg))
@@ -31,8 +29,7 @@ def recv_tcp_json(conn):
     if not data:
         return None
     return json.loads(data.decode('utf-8'))
-
-# --- Klasy gry ---
+# --
 class GameState:
     def __init__(self):
         self.ball_x, self.ball_y = WIDTH / 2, HEIGHT / 2
@@ -56,7 +53,7 @@ class ClientInfo:
         self.pings = deque(maxlen=20)
         self.bytes_sent = 0
 
-# --- Serwer ---
+# Serwer
 class PongServer:
     def __init__(self, protocol='tcp', port=5000):
         self.start_time = time.time()
@@ -199,3 +196,4 @@ if __name__=='__main__':
     args=parser.parse_args()
 
     PongServer(protocol=args.protocol,port=args.port)
+
