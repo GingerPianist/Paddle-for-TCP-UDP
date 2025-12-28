@@ -1,6 +1,3 @@
-# ========================
-# klient.py
-# ========================
 import socket
 import threading
 import json
@@ -161,3 +158,4 @@ if __name__=='__main__':
 
     client=PongClient(host=args.host,port=args.port,protocol=args.protocol)
     client.run()
+
